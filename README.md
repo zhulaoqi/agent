@@ -680,14 +680,6 @@ spec:
 
 ---
 
-## 📮 联系方式
-
-- 作者：kinch
-- 邮箱：your-email@example.com
-- 问题反馈：[GitHub Issues](https://github.com/your-username/agent/issues)
-
----
-
 ## 🎓 学习资源
 
 - [Spring AI Alibaba官方文档](https://spring-ai-alibaba.github.io/)
