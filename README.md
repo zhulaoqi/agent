@@ -682,7 +682,7 @@ spec:
 
 ## 🎓 学习资源
 
-- [Spring AI Alibaba官方文档](https://spring-ai-alibaba.github.io/)
+- [Spring AI Alibaba官方文档](https://java2ai.com/docs/quick-start)
 - [阿里云百炼文档](https://help.aliyun.com/zh/dashscope/)
 - [项目实战教程](./docs/tutorial.md)（待补充）
 
