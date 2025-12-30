@@ -32,7 +32,7 @@ import java.util.concurrent.CompletableFuture;
 public class CustomAuditHook extends ModelHook {
 
     private final AuditLogRepository auditLogRepository;
-    
+
     private static final String START_TIME_KEY = "__audit_start_time__";
     private static final String MESSAGE_COUNT_KEY = "__audit_message_count__";
 
