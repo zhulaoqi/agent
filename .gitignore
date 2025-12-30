@@ -1,10 +1,16 @@
-HELP.md
+# Maven
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# IDE - IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+
+# IDE - Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -13,21 +19,75 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
+# IDE - NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# IDE - VS Code
+.vscode/
+
+# Build
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# ===== Node.js / 前端 =====
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+lerna-debug.log*
+
+# 前端构建产物
+dist/
+dist-ssr/
+*.local
+
+# 前端环境变量
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===== 日志 =====
+*.log
+logs/
+*.log.*
+
+# ===== 临时文件 =====
+*.tmp
+*.temp
+*.swp
+*.bak
+*~
+
+# ===== 操作系统 =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===== 数据库 =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== 本地配置 =====
+application-local.yml
+application-local.properties
+*-local.yml
+*-local.properties
+
+# ===== 其他 =====
+HELP.md
