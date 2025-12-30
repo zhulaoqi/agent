@@ -22,5 +22,3 @@ public class AnalysisRequest {
     private String type;
 }
 
-
-

@@ -36,5 +36,3 @@ public class TextAnalysisResult {
     private String suggestion;
 }
 
-
-

@@ -27,5 +27,3 @@ public class PptRequest {
     private String template;
 }
 
-
-

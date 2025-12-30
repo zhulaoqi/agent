@@ -42,5 +42,3 @@ public class StructuredWeatherResponse {
     private String healthTip;
 }
 
-
-

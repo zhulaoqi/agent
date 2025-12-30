@@ -72,4 +72,3 @@ public interface PromptTemplateRepository extends JpaRepository<PromptTemplate, 
 }
 
 
-

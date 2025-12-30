@@ -81,4 +81,3 @@ public class MessageTrimmingHook extends MessagesModelHook {
 }
 
 
-
