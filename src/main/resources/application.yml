@@ -9,10 +9,10 @@ spring:
   # 数据库配置（MySQL）
   # ================================
   datasource:
-    url: jdbc:mysql://172.30.11.101:3306/agent_db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    url: localhost
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: gst
-    password: 12354
+    username: youname
+    password: youpassword
 
   # ================================
   # JPA配置
@@ -47,7 +47,7 @@ spring:
   # ================================
   ai:
     dashscope:
-      api-key: sk-086b79f2cacd41e2b07e63b8b11d0281
+      api-key: sk-***
       chat:
         options:
           model: qwen-plus
@@ -118,7 +118,7 @@ weather:
   api:
     enabled: true
     type: amap  # amap(高德) / qweather(和风) / mock(模拟数据)
-    key: 34443fb8ebc9c4d100ab535a68ae790f
+    key: ***
     url: https://restapi.amap.com/v3/weather/weatherInfo
 
 # ================================
