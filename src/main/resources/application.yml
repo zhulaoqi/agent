@@ -1,0 +1,134 @@
+# ================================
+# 应用基础配置
+# ================================
+spring:
+  application:
+    name: agent
+
+  # ================================
+  # 数据库配置（MySQL）
+  # ================================
+  datasource:
+    url: jdbc:mysql://172.30.11.101:3306/agent_db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: gst
+    password: 12354
+
+  # ================================
+  # JPA配置
+  # ================================
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # ================================
+  # Redis配置（用于CheckPoint持久化）
+  # 如果不需要可以注释掉
+  # ================================
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: 
+      timeout: 6000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+
+  # ================================
+  # Spring AI Alibaba配置
+  # ================================
+  ai:
+    dashscope:
+      api-key: sk-086b79f2cacd41e2b07e63b8b11d0281
+      chat:
+        options:
+          model: qwen-plus
+          temperature: 0.7
+          max-tokens: 2000
+      image:
+        options:
+          model: wanx-v1
+
+  # ================================
+  # 文件上传配置
+  # ================================
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+  # ================================
+  # 静态资源配置
+  # ================================
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+  # ================================
+  # JSON配置
+  # ================================
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+# ================================
+# 服务器配置
+# ================================
+server:
+  port: 8080
+
+# ================================
+# JWT配置
+# ================================
+jwt:
+  secret: ${JWT_SECRET:kinch-ai-agent-secret-key-please-change-in-production-2025}
+  expiration: 86400000
+
+# ================================
+# Token成本控制配置
+# ================================
+token:
+  limit:
+    daily: 100000
+    per-request: 4000
+  warning:
+    threshold: 80000
+
+# ================================
+# Agent配置
+# ================================
+agent:
+  max-iterations: 10
+  timeout: 60000
+
+# ================================
+# 天气API配置（可选）
+# 如果使用真实天气API，请配置以下信息
+# 推荐使用：高德地图天气API、和风天气API等
+# ================================
+weather:
+  api:
+    enabled: true
+    type: amap  # amap(高德) / qweather(和风) / mock(模拟数据)
+    key: 34443fb8ebc9c4d100ab535a68ae790f
+    url: https://restapi.amap.com/v3/weather/weatherInfo
+
+# ================================
+# 日志配置
+# ================================
+logging:
+  level:
+    root: INFO
+    com.kinch.agent: DEBUG
+    com.alibaba.cloud.ai: DEBUG
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+
